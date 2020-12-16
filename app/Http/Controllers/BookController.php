@@ -146,7 +146,11 @@ class BookController extends Controller
 
 		if($book){
 
-			$response = $book;
+			$response = [
+				"title" => $book->title,
+				"description" => $book->description,
+				"categories" => $book->categories
+			];
 
 		}else{
 			$response = "Libro no encontrado";
